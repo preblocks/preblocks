@@ -3,11 +3,23 @@ import * as React from 'react'
 
 import { cn } from '@/lib/utils'
 
-function Accordion({ ref, className, ...props }: React.HTMLAttributes<HTMLDivElement> & { ref?: React.RefObject<HTMLDivElement | null> }) {
+function Accordion({
+  ref,
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement> & {
+  ref?: React.RefObject<HTMLDivElement | null>
+}) {
   return <div ref={ref} className={cn('divide-y', className)} {...props} />
 }
 
-function AccordionItem({ ref, className, ...props }: React.DetailsHTMLAttributes<HTMLDetailsElement> & { ref?: React.RefObject<HTMLDetailsElement | null> }) {
+function AccordionItem({
+  ref,
+  className,
+  ...props
+}: React.DetailsHTMLAttributes<HTMLDetailsElement> & {
+  ref?: React.RefObject<HTMLDetailsElement | null>
+}) {
   return (
     <details
       ref={ref}
@@ -21,7 +33,14 @@ function AccordionItem({ ref, className, ...props }: React.DetailsHTMLAttributes
   )
 }
 
-function AccordionTrigger({ ref, className, children, ...props }: React.HTMLAttributes<HTMLElement> & { ref?: React.RefObject<HTMLElement | null> }) {
+function AccordionTrigger({
+  ref,
+  className,
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLElement> & {
+  ref?: React.RefObject<HTMLElement | null>
+}) {
   return (
     <summary
       ref={ref}
@@ -38,7 +57,14 @@ function AccordionTrigger({ ref, className, children, ...props }: React.HTMLAttr
   )
 }
 
-function AccordionContent({ ref, className, children, ...props }: React.HTMLAttributes<HTMLDivElement> & { ref?: React.RefObject<HTMLDivElement | null> }) {
+function AccordionContent({
+  ref,
+  className,
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement> & {
+  ref?: React.RefObject<HTMLDivElement | null>
+}) {
   return (
     <div
       ref={ref}
