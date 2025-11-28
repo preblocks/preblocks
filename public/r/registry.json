@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "preblocks",
+  "homepage": "https://preblocks.com",
+  "items": [
+    {
+      "name": "native-accordion",
+      "type": "registry:component",
+      "title": "Native Accordion",
+      "description": "This accordion built using native HTML details and summary elements with Tailwind CSS animation for better SEO and no JavaScript library required..",
+      "files": [
+        {
+          "path": "src/registry/react/native-accordion.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
