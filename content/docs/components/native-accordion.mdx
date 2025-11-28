@@ -1,0 +1,89 @@
+---
+title: Native Accordion
+longTitle: Animated Shadcn-style Native details/summary Accordion
+description: A shadcn-style accordion built using native HTML details and summary elements with Tailwind CSS animation for better SEO and no JavaScript library required.
+---
+
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/registry/react/native-accordion'
+
+<div className="flex w-full justify-center items-center p-10 border rounded-md not-prose">
+  <Accordion className="w-full max-w-md">
+    <AccordionItem name="item">
+      <AccordionTrigger>Is it accessible?</AccordionTrigger>
+      <AccordionContent>
+        Yes. It adheres to the WAI-ARIA design pattern.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem name="item">
+      <AccordionTrigger>Is it styled?</AccordionTrigger>
+      <AccordionContent>
+        Yes. It comes with default styles that matches the other components&apos; aesthetic.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem name="item">
+      <AccordionTrigger>Is it animated?</AccordionTrigger>
+      <AccordionContent>
+        Yes. It uses the new `::details-content` pseudo-element for smooth animations.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+## Installation
+
+```bash
+npx shadcn@latest add @preblocks/native-accordion
+```
+## Usage
+
+```tsx
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/native-accordion"
+```
+
+```tsx
+export function AccordionDemo() {
+  return (
+    <Accordion className="w-full">
+      <AccordionItem name="item">
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  )
+}
+```
+
+## Compatibility
+
+This component leverages the `::details-content` pseudo-element for smooth transition animations. Please note that this pseudo-element was introduced in Chrome 131 *(released November 2024)*, meaning animations will not be visible in unsupported browsers. However, the component will still function correctly. You can check browser compatibility on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::details-content#browser_compatibility).
+
+Additionally, `details-content:` support is available starting from [Tailwind CSS v4.1](https://tailwindcss.com/blog/tailwindcss-v4-1#prettier-accordions-with-details-content).
+
+## Comparing with Radix / shadcn
+
+This component offers significant advantages in terms of **SEO**, accessibility, and reduced JavaScript dependency compared to Radix UI and shadcn/ui's Accordion. However, animation features rely on newer browser support.
+
+| Feature | Native HTML Accordion | Radix / shadcn |
+| :- | :- | :- |
+| JavaScript Dependency | **None** (native HTML elements) | JavaScript library (Radix UI) |
+| DOM Rendering | **Content always rendered in DOM**, hidden by CSS | Content often not rendered until expanded |
+| SEO Benefits | **Semantic tags**, all content in initial DOM for crawlers | Content may not be in initial DOM |
+| In-page Search | **Can automatically expand** when hidden content is found | Hidden content may not be searchable or auto-expandable |
+| Accessibility | Inherently accessible due to native elements | Relies on WAI-ARIA implementation |
+| Animation Support | Relies on newer browser features (`::details-content`) | Generally well-supported across browsers |
+| Browser Compatibility | Core functionality works everywhere; animations require modern browsers | Broad browser support for all features |
+
+## Resources
+
+- [shadcn/ui - Accordion](https://ui.shadcn.com/docs/components/accordion): Style inspiration
+- [MDN - `<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details)
+- [MDN - `<summary>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/summary)
+- [MDN - `::details-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::details-content)
+- [Chrome for Developers - More options for styling `<details>`](https://developer.chrome.com/blog/styling-details)

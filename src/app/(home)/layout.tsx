@@ -3,5 +3,17 @@ import { baseOptions } from '@/lib/layout.shared'
 import type { ReactNode } from 'react'
 
 export default function Layout({ children }: { children: ReactNode }) {
-  return <HomeLayout {...baseOptions()}>{children}</HomeLayout>
+  return (
+    <HomeLayout
+      links={[
+        {
+          text: 'Components',
+          url: '/docs/components/native-accordion',
+        },
+      ]}
+      {...baseOptions()}
+    >
+      {children}
+    </HomeLayout>
+  )
 }

@@ -5,5 +5,6 @@ export function baseOptions(): BaseLayoutProps {
     nav: {
       title: 'Preblocks',
     },
+    githubUrl: 'https://github.com/preblocks/preblocks',
   }
 }
