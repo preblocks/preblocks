@@ -7,6 +7,10 @@ export default function Layout({ children }: { children: ReactNode }) {
     <HomeLayout
       links={[
         {
+          text: 'Docs',
+          url: '/docs',
+        },
+        {
           text: 'Components',
           url: '/docs/components/native-accordion',
         },

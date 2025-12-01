@@ -1,0 +1,44 @@
+---
+title: Preblocks Documentation
+description: Learn how to install Preblocks, configure the shadcn CLI registry namespace, and MCP.
+---
+
+## Add Registry
+
+You can add Preblocks as a registry namespace in your `components.json` file located in your project's root directory.
+
+```json
+{
+  "registries": {
+    "@preblocks": "https://preblocks.com/r/{name}.json"
+  }
+}
+```
+
+Learn more about registry namespaces in the [shadcn documentation](https://ui.shadcn.com/docs/registry/namespace).
+
+## Installation
+
+Once the registry is added, you can install any block or component provided by Preblocks using the shadcn CLI.
+
+```bash
+pnpm dlx shadcn add @preblocks/cta-1
+```
+
+```bash
+npx shadcn add @preblocks/cta-1
+```
+
+This command will install the [first Call to Action block](/react/call-to-action). You can find the CLI command to copy for each block in its top-right corner.
+
+## MCP Server
+
+You can configure the MCP server using the [shadcn CLI's built-in functionality](https://ui.shadcn.com/docs/registry/mcp).
+
+```bash
+pnpm dlx shadcn mcp init
+```
+
+---
+
+If you have any questions or find any issues with any component, please [open an issue](https://github.com/preblocks/preblocks/issues/new/choose) on GitHub, you can also [send an email](mailto:contact@preblocks.com).
