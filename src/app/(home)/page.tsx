@@ -28,7 +28,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" asChild>
-                <Link href="/docs/components/native-accordion">
+                <Link href="/docs/blocks/call-to-action">
                   Get Started
                   <ArrowRight />
                 </Link>

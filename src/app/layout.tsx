@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Preblocks',
-  description: 'A growing library of free, accessible UI blocks and components built on shadcn/ui and Tailwind CSS. Copy, paste and ship faster.',
+  description:
+    'A growing library of free, accessible UI blocks and components built on shadcn/ui and Tailwind CSS. Copy, paste and ship faster.',
 }
 
 export default function RootLayout({

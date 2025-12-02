@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-1",
+  "type": "registry:block",
+  "title": "Centered Accordion",
+  "description": "This centered call to action section uses Shadcn Button components to present a clear call-to-action with primary and secondary options. The centered layout features a prominent headline with supporting text, encouraging user engagement through two distinct button styles.",
+  "registryDependencies": ["button"],
+  "files": [
+    {
+      "path": "src/registry/react/call-to-action/one.tsx",
+      "content": "import { Button } from '@/components/ui/button'\n\ninterface Props {\n  headline?: string\n  subline?: string\n  primaryAction?: { text: string; href: string }\n  secondaryAction?: { text: string; href: string }\n}\n\nexport default function CtaSection({\n  headline = 'Ready to Get Started?',\n  subline = 'Join thousands of teams building better products today. No credit card required.',\n  primaryAction = { text: 'Start Free Trial', href: '#' },\n  secondaryAction = { text: 'View Demo', href: '#' },\n}: Props) {\n  return (\n    <section className=\"w-full py-10 md:py-14 relative overflow-hidden\">\n      <div className=\"absolute inset-0 bg-primary/10\" />\n      <div className=\"absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[600px] bg-primary/20 blur-[100px] rounded-full pointer-events-none\" />\n      <div className=\"relative z-10 max-w-4xl mx-auto text-center px-4\">\n        <h2 className=\"font-bold text-3xl md:text-4xl\">{headline}</h2>\n        <p className=\"mt-4 text-sm text-muted-foreground md:text-base\">\n          {subline}\n        </p>\n        <div className=\"mt-6 flex flex-col sm:flex-row justify-center gap-4\">\n          <Button asChild className=\"px-5 py-2 text-sm\">\n            <a href={primaryAction.href}>{primaryAction.text}</a>\n          </Button>\n          <Button variant=\"outline\" asChild className=\"px-5 py-2 text-sm\">\n            <a href={secondaryAction.href}>{secondaryAction.text}</a>\n          </Button>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["call-to-action"]
+}

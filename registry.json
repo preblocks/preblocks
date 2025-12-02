@@ -4,6 +4,20 @@
   "homepage": "https://preblocks.com",
   "items": [
     {
+      "name": "cta-1",
+      "type": "registry:block",
+      "title": "Centered Accordion",
+      "categories": ["call-to-action"],
+      "registryDependencies": ["button"],
+      "description": "This centered call to action section uses Shadcn Button components to present a clear call-to-action with primary and secondary options. The centered layout features a prominent headline with supporting text, encouraging user engagement through two distinct button styles.",
+      "files": [
+        {
+          "path": "src/registry/react/call-to-action/one.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "native-accordion",
       "type": "registry:component",
       "title": "Native Accordion",

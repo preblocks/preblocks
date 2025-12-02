@@ -11,6 +11,10 @@ export default function Layout({ children }: { children: ReactNode }) {
           url: '/docs',
         },
         {
+          text: 'Blocks',
+          url: '/docs/blocks/call-to-action',
+        },
+        {
           text: 'Components',
           url: '/docs/components/native-accordion',
         },
