@@ -18,6 +18,34 @@
       ]
     },
     {
+      "name": "faq-1",
+      "type": "registry:block",
+      "title": "Centered Accordion",
+      "categories": ["faq-section"],
+      "registryDependencies": ["accordion"],
+      "description": "This FAQ section features a centered layout with an accordion-style interface, making it easy for users to find answers to their questions. The design includes subtle hover effects on all interactive elements while maintaining a clean, organized structure for site navigation.",
+      "files": [
+        {
+          "path": "src/registry/react/faq-section/one.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-2",
+      "type": "registry:block",
+      "title": "Accordion with Group",
+      "categories": ["faq-section"],
+      "registryDependencies": ["accordion"],
+      "description": "This FAQ section features a centered layout with an accordion-style interface, making it easy for users to find answers to their questions. The design includes subtle hover effects on all interactive elements while maintaining a clean, organized structure for site navigation.",
+      "files": [
+        {
+          "path": "src/registry/react/faq-section/two.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "native-accordion",
       "type": "registry:component",
       "title": "Native Accordion",
