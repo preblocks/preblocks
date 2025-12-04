@@ -46,6 +46,19 @@
       ]
     },
     {
+      "name": "footer-1",
+      "type": "registry:block",
+      "title": "Minimal Footer",
+      "categories": ["footer"],
+      "description": "This minimalist footer arranges navigation links in a responsive grid alongside brand information and social media icons. The design includes subtle hover effects on all interactive elements while maintaining a clean, organized structure for site navigation.",
+      "files": [
+        {
+          "path": "src/registry/react/footer/one.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "native-accordion",
       "type": "registry:component",
       "title": "Native Accordion",
