@@ -59,6 +59,21 @@
       ]
     },
     {
+      "name": "login-1",
+      "type": "registry:block",
+      "title": "Simple Login Card",
+      "categories": ["login"],
+      "dependencies": ["@tabler/icons-react"],
+      "registryDependencies": ["button", "card", "input", "field"],
+      "description": "A clean, centered login card with email/password authentication and social login options. Features a professional layout with clear hierarchy and premium styling.",
+      "files": [
+        {
+          "path": "src/registry/react/login/one.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "native-accordion",
       "type": "registry:component",
       "title": "Native Accordion",
