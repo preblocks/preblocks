@@ -56,7 +56,7 @@ export default function LoginOne() {
 
           <div className="relative flex justify-center items-center w-full">
             <div className="border-border absolute h-px w-full border-t" />
-            <span className="bg-background text-muted-foreground relative px-2 text-xs">
+            <span className="bg-card text-muted-foreground relative px-2 text-xs">
               Or continue with
             </span>
           </div>
